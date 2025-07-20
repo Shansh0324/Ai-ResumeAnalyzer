@@ -8,9 +8,9 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import { usePuterStore } from "~/lib/puter";
 import "./app.css";
-import { useEffect } from "react";
+import {usePuterStore} from "~/lib/puter";
+import {useEffect} from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { init } = usePuterStore();
 
   useEffect(() => {
-    init();  
+    init()
   }, [init]);
 
   return (
